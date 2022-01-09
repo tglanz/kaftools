@@ -1,5 +1,6 @@
 rootProject.name = "kaftools"
-include("cli")
+
+include("cli", "file-connector")
 
 enableFeaturePreview("VERSION_CATALOGS")
 
@@ -14,6 +15,7 @@ dependencyResolutionManagement {
         }
         create("kafka") {
             alias("clients").to("org.apache.kafka:kafka-clients:3.0.0")
+            alias("connect").to("org.apache.kafka:connect-api:3.0.0")
         }
         create("utils") {
             alias("gson").to("com.google.code.gson:gson:2.8.6")
